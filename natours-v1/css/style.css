@@ -5,18 +5,22 @@ Medium green: #55C57A
 Dark green: #28B485
 */
 
-* {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {
   color: #777;
-  padding: 30px;
-  font-size: 16px;
+  padding: 3rem;
   line-height: 1.7;
   font-weight: 400;
+  box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
 
@@ -34,13 +38,13 @@ body {
 }
 
 .logo-box {
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
   position: absolute;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .text-box {
@@ -53,16 +57,16 @@ body {
 
 .heading-primary {
   color: #FFF;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
   text-transform: uppercase;
   backface-visibility: hidden;
 }
 
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   animation-duration: 1s;
   animation-name: moveInLeft;
   animation-timing-function: ease-out;
@@ -70,7 +74,7 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 17.4px;
   animation: moveInRight 1s ease-out;
@@ -122,10 +126,11 @@ body {
 
 
 .btn:link, .btn:visited {
-  padding: 15px 40px;
+  font-size: 1.6rem;
   position: relative;
   transition: all .2s;
-  border-radius: 100px;
+  border-radius: 10rem;
+  padding: 1.5rem 4rem;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -155,7 +160,7 @@ body {
   height: 100%;
   position: absolute;
   transition: all .4s;
-  border-radius: 100px;
+  border-radius: 10rem;
   display: inline-block;
 }
 
@@ -169,6 +174,6 @@ body {
 }
 
 .btn-animated {
-  animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
+  animation: moveInBottom .5s ease-out .75s;
 }
